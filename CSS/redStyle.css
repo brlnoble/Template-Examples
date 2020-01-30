@@ -1,0 +1,209 @@
+html { /*hide scroll wheel*/
+    overflow: scroll;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+body {
+    margin: 0 auto;
+    font-family: Arial;
+    background-color: #655;
+    height: 100vh;
+    font-family: 'Comfortaa', sans-serif;
+    color: white;
+}
+
+/*------------------------Main Head----------------------*/
+.cover {
+    position: relative;
+    color: #FFF;
+    font-size: 5vh;
+    text-shadow: 0 0 20px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#title { /*Just makes the title pop in a little fancier*/
+    transition: all 2s ease;
+}
+
+.cover > img {
+    box-shadow: 0 0 20px #000;
+    border-radius: 50px;
+    margin-right: 2vw;
+    width: 12vh;
+    height: 12vh;
+}
+
+/*-------------------------Nav Bar-----------------------*/
+.nav {
+    position: fixed; /*navigation always at top of screen*/
+    top: 0;
+    width: 100%;
+    background: #B7261B;
+    z-index: 100; /*keep it on top of everything else*/
+    height: 10vh; /*scale with window size*/
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-color: #F27066;
+}
+
+@media only screen and (max-height: 600px) { /*keep nav bar from shrinking too much*/
+    .nav {
+        height: 60px;
+    }
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) { /*resize text in nav bar if screen is too small*/
+    .nav-items {
+        font-size: 0.7em;
+        padding: 0;
+    }
+}
+
+.push {
+    margin-left: auto;
+    padding-left: 100px;
+}
+
+li {
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+nav li:hover { /*increase text size when hovering*/
+    font-size: 120%;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.signIn {
+    padding: 10px;
+    border-style: solid;
+    border-color: #FFF;
+    border-radius: 10px;
+}
+
+/*-------------------------Cover-------------------------*/
+.container {
+    height: 60vh; /*percent of viewport height*/
+    position: relative;
+    margin: 0;
+}
+
+.wrapper-all { /*aid in parallax, set perspective and hold page scale*/
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    perspective: 2px;
+}
+
+.parallax::after { /*where all the magic happens*/
+    content: ""; /*blank to mke stuff show up*/
+    position: absolute; /*lock at top of page*/
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-2px) scale(2.1); /*scale it so it displays properly*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /*make it the farthest object back*/
+    background-image: url("../img/AdobeStock_248929619.jpeg");
+}
+/*--------------------------Grid-------------------------*/
+:root {
+    /*Allows background gradient to be easily changed*/
+    --c1: 50; 
+    --c2: 20; 
+    --c3: 20; 
+}
+
+.mainBlock {
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(var(--c1),var(--c2),var(--c3),1),  rgba(var(--c1),var(--c2),var(--c3),1),  rgba(var(--c1),var(--c2),var(--c3),1),  rgba(var(--c1),var(--c2),var(--c3),1),  rgba(var(--c1),var(--c2),var(--c3),1),  rgba(var(--c1),var(--c2),var(--c3),1), rgba(var(--c1),var(--c2),var(--c3),1)); /*excessive gradient to create background overlay*/
+    padding: 200px;
+    padding-bottom: 50px;
+    
+}
+
+.mainBlock {
+    padding: 100px;
+    padding-top: 100px;
+}
+
+.aboutTextImage {
+    position: static;
+    max-width: 110vw;
+    overflow-x: hidden;
+    z-index: -1;
+    margin-top: -150px;
+    margin-bottom: -100px;
+}
+
+.textBlock {
+    background-color: #C7675F;
+    width: 50vw;
+    padding: 30px;
+    margin: 20px;
+    border-radius:20px;
+    transition: all 1s ease;
+    --notchSize: 40px;
+  /*cut the edges slightly to give the chipped look*/
+    clip-path: 
+        polygon(
+            0% var(--notchSize), 
+            var(--notchSize) 0%, 
+            calc(100% - var(--notchSize)) 0%, 
+            1000% var(--notchSize), 
+            100% calc(100% - var(--notchSize)), 
+            calc(100% - var(--notchSize)) 100%, 
+            var(--notchSize) 100%, 
+            -1000% calc(100% - var(--notchSize))
+        );
+}
+
+#slogan {
+    position: relative; 
+    left: 25%; 
+    margin-top: 50px; 
+    margin-bottom: 100px;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    font-size: 125%;
+}
+
+.mainText {
+    padding: 100px;
+    padding-top: 50px;
+    background-color: #522;
+    border-radius: 20px;
+}
+
+/*-------------------------Footer------------------------*/
+footer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 50%;
+}

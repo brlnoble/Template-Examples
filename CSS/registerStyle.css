@@ -1,0 +1,164 @@
+html { /*hide scroll wheel*/
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+/* ------------------Basic formatting------------------- */
+
+body {
+  margin: 0 auto;
+  font-family: Arial;
+  background: radial-gradient(circle at 100%,#7397a1 1%,#3f2c41 100%);
+  height: 100vh;
+  font-family: 'Comfortaa', sans-serif;
+  color: white;
+}
+
+/* ----------------------Nav Bar------------------------ */
+
+.nav {
+  position: fixed; /*navigation always at top of screen*/
+  top: 0;
+  width: 100%;
+  background: rgb(82, 27, 183);
+  z-index: 100; /*keep it on top of everything else*/
+  height: 10vh; /*scale with window size*/
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+  border-color: rgb(144, 102, 242);
+}
+
+@media only screen and (max-height: 600px) { /*keep nav bar from shrinking too much*/
+  .nav {
+      height: 60px;
+  }
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) { /*resize text in nav bar if screen is too small*/
+  .nav-items {
+      font-size: 0.7em;
+      padding: 0;
+  }
+}
+
+.push {
+  margin-left: auto;
+  padding-left: 100px;
+}
+
+li {
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+nav li:hover { /*increase text size when hovering*/
+  font-size: 120%;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.signIn {
+  padding: 10px;
+  border-style: solid;
+  border-color: #FFF;
+  border-radius: 10px;
+}
+
+/* ----------------------Form------------------------ */
+
+.wrapper {
+  z-index: 1;
+}
+
+.submitButton {
+  left: 50%;
+  border-color: transparent;
+  background-color: rgb(144, 102, 242);
+  padding: 30px;
+  cursor:pointer;
+  color:#FFF;
+  font-size:1.5em;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 1s ease;
+  --notchSize: 20px;
+  font-family: 'Comfortaa', sans-serif;
+/*cut the edges slightly*/
+  clip-path: 
+      polygon(
+          0% var(--notchSize), 
+          var(--notchSize) 0%, 
+          calc(100% - var(--notchSize)) 0%, 
+          1000% var(--notchSize), 
+          100% calc(100% - var(--notchSize)), 
+          calc(100% - var(--notchSize)) 100%, 
+          var(--notchSize) 100%, 
+          -1000% calc(100% - var(--notchSize))
+      );
+}
+
+.formBlock {
+  position: relative;
+  z-index: 50;
+  border-color: transparent;
+  background-color: transparent;
+  padding: 30px;
+  color:#FFF;
+  font-size:1.5em;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 1s ease;
+  --notchSize: 30px;
+}
+
+@media only screen and (max-width: 600px) { /*resize text in nav bar if screen is too small*/
+  .formBlock {
+      background-color: transparent;
+      --notchSize: 0;
+  }
+}
+
+.submitButton:hover {
+  transform: scale(1.15);
+  background-color: rgb(195, 174, 245);
+}
+
+.formElements {
+  display: grid;
+  grid-auto-columns: 400px;
+  justify-content: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+/* -----------------------Footer-------------------------- */
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 50%;
+  background: #666;
+  padding: 20px;
+  z-index: 100;
+}

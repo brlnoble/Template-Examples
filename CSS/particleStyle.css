@@ -1,0 +1,41 @@
+.snow {
+  opacity: 0.5;
+  position: absolute;
+  top: 100vh;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+.layer1 {
+  width: 1.5rem;
+  height: 1.5rem;
+  box-shadow: 71.1vw 76.2vh 0 -0.45rem#fff,87.9vw 22.4vh 0 -0.37rem#fff,4.6vw 75.6vh 0 -0.24rem#fff,87.6vw 70.9vh 0 -0.2rem#fff,17.2vw 94.6vh 0 -0.17rem#fff,8.3vw 19.1vh 0 -0.28rem#fff,89.9vw 41.9vh 0 -0.26rem#fff,52.1vw 49.5vh 0 -0.4rem#fff,97.5vw 24.8vh 0 -0.22rem#fff,25.7vw 96.9vh 0 -0.09rem#fff,61.7vw 3.9vh 0 -0.33rem#fff,24.3vw 53.9vh 0 -0.04rem#fff,65.5vw 4.8vh 0 -0.4rem#fff,38.8vw 27.6vh 0 -0.22rem#fff,3.8vw 75.4vh 0 -0.31rem#fff,55.3vw 39.7vh 0 -0.33rem#fff,75.6vw 46.8vh 0 -0.25rem#fff,23.6vw 67.2vh 0 -0.18rem#fff,24.3vw 1.3vh 0 -0.21rem#fff,21vw 6.3vh 0 -0.38rem#fff;
+  filter: blur(1px);
+  animation-duration: 24s; }
+
+.layer1.a {
+  animation-delay: -6s; }
+
+.layer2 {
+  width: 1.2rem;
+  height: 1.2rem;
+  box-shadow: 28.9vw 99.1vh 0 -0.16rem#ffcbf2,36.7vw 39.6vh 0 -0.24rem#ffcbf2,47.6vw 21.1vh 0 -0.15rem#ffcbf2,98.3vw 54.6vh 0 -0.12rem#ffcbf2,8.2vw 22.9vh 0 -0.35rem#ffcbf2,67.6vw 84.6vh 0 -0.06rem#ffcbf2,98.9vw 97.2vh 0 -0.17rem#ffcbf2,25.3vw 40.5vh 0 -0.35rem#ffcbf2,94.2vw 92.5vh 0 -0.22rem#ffcbf2,82.5vw 15.3vh 0 -0.41rem#ffcbf2,44.3vw 1.9vh 0 -0.49rem#ffcbf2,75.4vw 48.8vh 0 -0.27rem#ffcbf2,18.7vw 42.2vh 0 -0.48rem#ffcbf2,37.3vw 64.9vh 0 -0.33rem#ffcbf2,42.5vw 49.6vh 0 -0.32rem#ffcbf2,32.8vw 45vh 0 -0.42rem#ffcbf2,57vw 35.4vh 0 -0.3rem#ffcbf2,87.1vw 56.4vh 0 -0.04rem#ffcbf2,41.5vw 86.7vh 0 -0.43rem#ffcbf2,23vw 49.5vh 0 -0.36rem#ffcbf2;
+  filter: blur(2px);
+  animation-duration: 32s; }
+
+.layer2.a {
+  animation-delay: -8s; }
+
+.layer3 {
+  width: 0.8rem;
+  height: 0.8rem;
+  box-shadow: 24.1vw 28.1vh 0 -0.43rem#c4ddff,26.8vw 10.9vh 0 -0.24rem#c4ddff,69.7vw 72.8vh 0 -0.07rem#c4ddff,42.5vw 11.6vh 0 -0.08rem#c4ddff,8.4vw 4.8vh 0 -0.1rem#c4ddff,89.6vw 64vh 0 -0.36rem#c4ddff,19.2vw 95.4vh 0 -0.38rem#c4ddff,4vw 15.9vh 0 -0.06rem#c4ddff,17.3vw 89.5vh 0 -0.06rem#c4ddff,21.1vw 32.4vh 0 -0.46rem#c4ddff,6vw 77.1vh 0 -0.46rem#c4ddff,88.5vw 19.6vh 0 -0.14rem#c4ddff,45.4vw 30.5vh 0 -0.21rem#c4ddff,38.1vw 98.9vh 0 -0.47rem#c4ddff,86.7vw 12.8vh 0 -0.22rem#c4ddff,66.6vw 51.9vh 0 -0.26rem#c4ddff,28vw 13.6vh 0 -0.08rem#c4ddff,25.8vw 55.3vh 0 -0.38rem#c4ddff,23.4vw 63.3vh 0 -0.01rem#c4ddff,9.1vw 68.5vh 0 -0.23rem#c4ddff;
+  filter: blur(4px);
+  animation-duration: 40s; }
+
+.layer3.a {
+  animation-delay: -10s; }
+
+@keyframes fall {
+  100% {
+    transform: translateY(-200vh); } }
