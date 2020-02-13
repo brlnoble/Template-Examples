@@ -11,10 +11,10 @@ $s3:"";
         $s3: $s3 + ",";
     }
 }
-.snow {
+.particles {
     opacity: 0.5;
     position: absolute;
-    top:100vh;
+    top: 100vh;
     animation-name: fall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -22,8 +22,8 @@ $s3:"";
 .layer1 {
     width: 1.5rem;
     height: 1.5rem;
+   
     box-shadow: #{$s1};
-    filter: blur(1px);
     animation-duration: 24s;
 }
 .layer1.a {
@@ -33,7 +33,7 @@ $s3:"";
     width: 1.2rem;
     height: 1.2rem;
     box-shadow: #{$s2};
-    filter: blur(2px);
+    //filter: blur(1px);
     animation-duration: 32s;
 }
 .layer2.a {
@@ -43,7 +43,7 @@ $s3:"";
     width: 0.8rem;
     height: 0.8rem;
     box-shadow: #{$s3};
-    filter: blur(4px);
+    //filter: blur(2px);
     animation-duration: 40s;
 }
 .layer3.a {
