@@ -10,6 +10,7 @@ html { /*hide scroll wheel*/
 
 body {
     margin: 0 auto;
+    padding: 0;
     font-family: Arial;
     background-color: #655;
     height: 100vh;
@@ -48,7 +49,7 @@ body {
     width: 100%;
     background: #B7261B;
     z-index: 100; /*keep it on top of everything else*/
-    height: 10vh; /*scale with window size*/
+    height: 8vh; /*scale with window size*/
     border-bottom-style: solid;
     border-bottom-width: 4px;
     border-color: #F27066;
@@ -56,7 +57,7 @@ body {
 
 @media only screen and (max-height: 600px) { /*keep nav bar from shrinking too much*/
     .nav {
-        height: 60px;
+        height: 48px;
     }
 }
 
@@ -67,17 +68,18 @@ body {
     align-items: center;
     list-style: none;
     margin: 0;
+    padding-top: 0;
     font-size: 1em;
     font-weight: bold;
 }
 
-.push {
+.push { /*keeps register button on far side*/
     margin-left: auto;
-    padding-left: 100px;
 }
 
 li {
     padding: 20px;
+    padding-top: 10px;
     transition: all 0.3s ease;
 }
 
@@ -194,8 +196,11 @@ a {
 
 @media only screen and (max-width: 600px) {
     .nav-items {
-        font-size: 0.7em;
+        font-size: 50%;
         padding: 0;
+    }
+    .nav {
+        height: 48px;
     }
     .cover {
         font-size: 3vh;
